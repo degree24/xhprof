@@ -3,9 +3,8 @@ php xhprof
 
 # install
 
-## nginx
+### nginx
 在 nginx.conf 中添加运行文件（注：文件路径根据自己项目路径配置）
-
 
 ```
 server {
@@ -20,3 +19,18 @@ server {
         }
 }
  ```
+ 
+ ### 配置prepend.php
+ 
+ 添加需要分析的域名
+ 
+ ```
+ $listen = [
+         'localhost:8016',
+     ];
+ ```
+ 
+ ### 配置项目虚拟域名，并访问查看分析结果
+ 
+ http://www.xhprof.com/xhprof_html/index.php
+ 
