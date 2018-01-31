@@ -30,6 +30,7 @@
 // @author(s)  Kannan Muthukkaruppan
 //             Changhao Jiang
 //
+include "../conf.php";
 
 // by default assume that xhprof_html & xhprof_lib directories
 // are at the same level.
@@ -81,7 +82,7 @@ $vrbar = ' class="vrbar"';
 $vgbar = ' class="vgbar"';
 
 $xhprof_runs_impl = new XHProfRuns_Default();
-$xhprof_runs_impl->setDir('/Users/pb/Work/xhprof/data');
+$xhprof_runs_impl->setDir(XhprofData);
 
 displayXHProfReport($xhprof_runs_impl, $params, $source, $run, $wts,
                     $symbol, $sort, $run1, $run2);
