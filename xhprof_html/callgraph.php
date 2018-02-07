@@ -28,7 +28,7 @@
  *
  * @author Changhao Jiang (cjiang@facebook.com)
  */
-
+include "../conf.php";
 // by default assume that xhprof_html & xhprof_lib directories
 // are at the same level.
 $GLOBALS['XHPROF_LIB_ROOT'] = dirname(__FILE__) . '/../xhprof_lib';
@@ -80,7 +80,7 @@ if (!array_key_exists($type, $xhprof_legal_image_types)) {
 }
 
 $xhprof_runs_impl = new XHProfRuns_Default();
-$xhprof_runs_impl->setDir('/Users/pb/Work/xhprof/data');
+$xhprof_runs_impl->setDir(XhprofData);
 
 if (!empty($run)) {
   // single run call graph image generation
